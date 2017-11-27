@@ -1,14 +1,17 @@
 var http = require("http");
-var task = require("./tasks.js")
+var task = require("./tasks.js");
+var express = require("express");
+var app = express();
+var taskRoute = require("./tasks-routes.js");
+console.log("working")
+// app.get("/", function (req, res) {
+// console.log("working")
+// var i=Math.floor(Math.random()*task.tasks.length)
+// res.send(task.tasks[i]);
+// });
 
-console.log(task);
+app.use(express.static(__dirname + "/public"));
+app.use("/", taskRoute);
 
-http.createServer(onRequest).listen(3000);
-function onRequest(request, response) {
-    console.log(task.tasks);
-response.writeHead(200, { "Content-type": "text/plain" });
-var i=Math.floor(Math.random()*task.tasks.length)
-console.log(i)
-response.write(task.tasks[i]);
-response.end();
-}
+var server = app.listen(3000, function (){
+});

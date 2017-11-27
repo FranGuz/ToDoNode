@@ -1,0 +1,23 @@
+{
+  "name": "nodelab",
+  "version": "1.0.0",
+  "description": "node lab\u001b[D\u001b[D\u001b[C\u001b[C",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranGuz/ToDoNode.git"
+  },
+  "author": "Francisco Guzman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranGuz/ToDoNode/issues"
+  },
+  "homepage": "https://github.com/FranGuz/ToDoNode#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
